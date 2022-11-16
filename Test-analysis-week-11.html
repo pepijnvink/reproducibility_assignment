@@ -299,17 +299,23 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+content: "";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "\e258";
-font-family: 'Glyphicons Halflings';
+content: "";
 border: none;
+}
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "";
+font-family: 'Glyphicons Halflings';
+display: inline-block;
+padding: 10px;
+border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -358,9 +364,9 @@ display: none;
 
 
 <pre class="r"><code># run only once to download
-# stroop_data &lt;- read.table(&quot;https://raw.githubusercontent.com/Lakens/Stroop/master/stroop.txt&quot;, 
-#                           sep = &quot;\t&quot;, header = TRUE)
-# write.table(stroop_data, file = &quot;stroop.csv&quot;, quote = FALSE, row.names = FALSE)
+stroop_data &lt;- read.table(&quot;https://raw.githubusercontent.com/Lakens/Stroop/master/stroop.txt&quot;, 
+                           sep = &quot;\t&quot;, header = TRUE)
+write.table(stroop_data, file = &quot;stroop.csv&quot;, quote = FALSE, row.names = FALSE)
 
 # load the data
 stroop_data &lt;- read.csv(&quot;stroop.csv&quot;, sep = &quot; &quot;, header = TRUE)
