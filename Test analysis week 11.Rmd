@@ -1,0 +1,21 @@
+---
+title: "Test analysis"
+author: "Kirsten van Kessel"
+date: "2022-11-15"
+output: html_document
+---
+
+```{r}
+# run only once to download
+# stroop_data <- read.table("https://raw.githubusercontent.com/Lakens/Stroop/master/stroop.txt", 
+#                           sep = "\t", header = TRUE)
+# write.table(stroop_data, file = "stroop.csv", quote = FALSE, row.names = FALSE)
+
+# load the data
+stroop_data <- read.csv("stroop.csv", sep = " ", header = TRUE)
+
+# test to find difference between congruent and incongruent 
+t.test(stroop_data$Congruent, stroop_data$Incongruent)
+```
+
+
