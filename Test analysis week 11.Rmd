@@ -16,6 +16,8 @@ stroop_data <- read.csv("stroop.csv", sep = " ", header = TRUE)
 
 # test to find difference between congruent and incongruent 
 t.test(stroop_data$Congruent, stroop_data$Incongruent)
+
+# There is a significant difference
 ```
 
 
